@@ -4,6 +4,8 @@ services:
   minecraft-server:
     build: .
     ports:
+      - "80:25565"
+      - "443:25565"
       - "25565:25565"         # Expose Minecraft server port 25565
     volumes:
       - ./data:/minecraft     # Bind mount for persistence of data
