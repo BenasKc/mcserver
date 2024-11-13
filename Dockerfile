@@ -13,8 +13,7 @@ COPY server.properties /minecraft/server.properties
 # Accept the Minecraft EULA
 RUN echo "eula=true" > eula.txt
 
-# Expose the default Minecraft server port
-EXPOSE 25565
+EXPOSE 80
 
 # Set the command to run the Minecraft server
 CMD ["java", "-Xmx400M", "-Xms400M", "-jar", "server.jar", "nogui"]
