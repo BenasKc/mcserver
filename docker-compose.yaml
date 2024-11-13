@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  minecraft-server:
+    build: .
+    ports:
+      - "25565:25565"         # Map port 25565 for Minecraft server
+    volumes:
+      - ./data:/minecraft     # Bind mount for persistence of data
+    environment:
+      EULA: "TRUE"            # Accept the EULA via environment variable
+    stdin_open: true          # Optional: keep STDIN open for console input
+    tty: true                 # Optional: allocate a pseudo-TTY
+
