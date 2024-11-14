@@ -18,5 +18,5 @@ EXPOSE 80
 EXPOSE 443
 
 # Set the command to run the Minecraft server
-CMD ["java", "-Xmx400M", "-Xms400M", "-jar", "server.jar", "nogui"]
+CMD ["java", "-Xmx900M", "-Xms900M", "-jar", "server.jar", "nogui"]
 
